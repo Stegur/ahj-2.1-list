@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>List</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="goods">
+
+      <div class="goods__header">
+        <h3 class="goods__title">Товары</h3> <span class="add" id="add">+</span>
+      </div>
+
+
+      <div class="goods__popup" id="goods__popup">
+        <form class="form" id="form">
+
+          <label for="title">Название</label>
+          <input type="text" name="title" id="title" class="input">
+          <p class="title-error" id="title-error">You need to type title!</p>
+
+          <label for="price">Стоимость</label>
+          <input type="text" name="price" id="price" class="input">
+          <p class="price-error" id="price-error">You need to type price!</p>
+
+          <div class="btns">
+            <button type="submit" id="submit">Save</button>
+            <button id="cancel">Cancel</button>
+          </div>
+
+        </form>
+      </div>
+
+      <table class="goods__list" id="goods__list">
+        <tr class="column__title">
+          <td>Название</td>
+          <td>Стоимость</td>
+          <td>Действия</td>
+        </tr>
+      </table>
+
+    </div>
+
+  </div>
+  <script src="js/app.js">
+  </script>
+</body>
+
+</html>
