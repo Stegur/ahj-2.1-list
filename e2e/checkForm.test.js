@@ -8,7 +8,7 @@ jest.setTimeout(60000);
 describe('Items list', () => {
   let browser = null;
   let page = null;
-  const baseUrl = 'http://localhost:9999';
+  const baseUrl = 'http://localhost:9000';
 
   beforeAll(async () => {
     await new Promise((resolve, reject) => {
@@ -22,8 +22,8 @@ describe('Items list', () => {
       });
     });
     browser = await puppeteer.launch({
-      headless: false, // show gui
-      slowMo: 50,
+      // headless: false, // show gui
+      // slowMo: 50,
       // devtools: true, // show devTools
     });
     page = await browser.newPage();
@@ -94,7 +94,7 @@ describe('Items list', () => {
     await page.keyboard.up('Control');
     await page.keyboard.press('Backspace');
 
-    await $price.type('15000'),
+    await $price.type('15000');
 
     $submit.click();
 
@@ -109,5 +109,4 @@ describe('Items list', () => {
     expect(title).toBe('Xiaomi Mi5');
     expect(price).toBe('15000');
   });
-
 });
